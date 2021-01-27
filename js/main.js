@@ -28,7 +28,16 @@ var app = new Vue({
 
       return this.imageIDX
     },
-    
+    isActive: function(i){
+      if (i == this.imageIDX) {
+        return 'fas fa-circle active'
+      }else {
+        return 'fas fa-circle'
+      }
+    },
+    changeCircle:function(i){
+      this.imageIDX= i
+    }
 }
 });
 
